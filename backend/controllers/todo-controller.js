@@ -22,8 +22,9 @@ export default class TodoController {
 
     async getTodos(req, res) {
         try {
+            const status = req.params.status
             const todo = await EntityFactory.getEntity('todo')
-            const todos = await todo.getTodos('all')
+            const todos = await todo.getTodos(status)
             res.json(todos)
         } catch(err) {
             console.log(err)

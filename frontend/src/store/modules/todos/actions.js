@@ -12,7 +12,25 @@ export default {
 
     async getTodo({ commit }) {
         try {
-            const res = await axios.get('http://localhost:5000/todos')
+            const res = await axios.get('http://localhost:5000/todos/all')
+            commit('SET_TODOS_TO_STATE', res.data)
+        } catch(err) {
+            console.log(err)
+        }
+    },
+
+    async getNewTodo({ commit }) {
+        try {
+            const res = await axios.get('http://localhost:5000/todos/new')
+            commit('SET_TODOS_TO_STATE', res.data)
+        } catch(err) {
+            console.log(err)
+        }
+    },
+
+    async getFinishedTodo({ commit }) {
+        try {
+            const res = await axios.get('http://localhost:5000/todos/finished')
             commit('SET_TODOS_TO_STATE', res.data)
         } catch(err) {
             console.log(err)

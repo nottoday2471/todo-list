@@ -29,14 +29,18 @@ export default class Todo {
         }
     }
 
-    async getTodos(paramForSort) {
+    async getTodos(status) {
         try {
-            switch(paramForSort) {
+            console.log(status)
+            switch(status) {
                 case 'all':
                     this.#todos = await this.#collection.find().toArray()
                     return this.#todos
                 case 'finished':
-                    this.#todos = await this.#collection.find().toArray()
+                    this.#todos = await this.#collection.find({status: 'finished'}).toArray()
+                    return this.#todos
+                case 'new':
+                    this.#todos = await this.#collection.find({status: 'new'}).toArray()
                     return this.#todos
                 default:
                     break

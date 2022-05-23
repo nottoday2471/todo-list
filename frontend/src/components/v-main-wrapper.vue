@@ -10,6 +10,8 @@
                     @addTodo="addTodo"
                 />
 
+                <v-filter-todos />
+
                 <v-alert-for-empty-todo
                     v-if="isTodoEmpty"
                 />
@@ -31,6 +33,7 @@ import VAddTodo from "@/components/v-add-todo"
 import VTodoList from "@/components/v-todo-list"
 import VTodoStatistics from "@/components/v-todo-statistics"
 import VAlertForEmptyTodo from "@/components/v-alert-for-empty-todo"
+import VFilterTodos from "@/components/v-filter-todos"
 
 const store = useStore()
 
