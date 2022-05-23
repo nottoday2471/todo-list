@@ -1,0 +1,26 @@
+html {
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    width: 100%;
+    background: rgb(0,255,218);
+    background: linear-gradient(180deg, rgba(0,255,218,1) 14%, rgba(0,181,255,1) 85%);
+}
+
+::-webkit-scrollbar {
+    width: .5rem;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
