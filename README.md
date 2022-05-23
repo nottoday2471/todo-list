@@ -11,6 +11,12 @@ Then go to the backend directory
 ```bash
 cd backend
 ```
+Then enter script to install dependencies
+
+```bash
+npm install
+```
+
 Then enter script to start nodemon
 
 ```bash
@@ -31,6 +37,12 @@ At the start go to the frontend directory
 ```bash
 cd frontend 
 ```
+Then enter script to install dependencies
+
+```bash
+npm install
+```
+
 Then enter script
 
 ```bash
