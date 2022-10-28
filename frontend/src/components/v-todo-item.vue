@@ -56,6 +56,8 @@ let isTodoEditorOpen = ref(false)
 
 let newTodoText = ref(props.todo.text)
 
+
+
 let counter = ref(0)
 let timer = ref(null)
 
