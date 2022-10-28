@@ -15,7 +15,7 @@ export default class TodoController {
             const todo = await EntityFactory.getEntity('todo')
             const addedTodo = await todo.insertTodo(text.text)
             res.status(201).json(addedTodo)
-        } catch(err) {
+        } catch (err) {
             console.log(err)
         }
     }
@@ -25,8 +25,9 @@ export default class TodoController {
             const status = req.params.status
             const todo = await EntityFactory.getEntity('todo')
             const todos = await todo.getTodos(status)
+            console.log()
             res.json(todos)
-        } catch(err) {
+        } catch (err) {
             console.log(err)
         }
     }
@@ -37,7 +38,7 @@ export default class TodoController {
             const todo = await EntityFactory.getEntity('todo')
             const changedTodo = await todo.updateTodo(newTodo)
             res.json(changedTodo)
-        } catch(err) {
+        } catch (err) {
             console.log(err)
         }
     }
@@ -48,7 +49,7 @@ export default class TodoController {
             const todo = await EntityFactory.getEntity('todo')
             await todo.deleteTodo(id)
             res.status(201).json({ message: 'OK' })
-        } catch(err) {
+        } catch (err) {
             console.log(err)
         }
     }
@@ -58,7 +59,7 @@ export default class TodoController {
             const todo = await EntityFactory.getEntity('todo')
             await todo.deleteAllTodos()
             res.status(201).json({ message: 'OK' })
-        } catch(err) {
+        } catch (err) {
             console.log(err)
         }
     }

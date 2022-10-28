@@ -37,7 +37,7 @@ import VFilterTodos from "@/components/v-filter-todos"
 
 const store = useStore()
 
-const todos = computed(() => store.state.todos.todos)
+const todos = computed(() => store.getters.getTodos)
 
 let isTodoEmpty = ref(false)
 

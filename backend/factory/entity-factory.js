@@ -1,5 +1,5 @@
 import Todo from '../models/todo-model.js'
-import MongoConnection from "../config/database.js";
+import MongoConnection from '../config/database.js'
 
 export default class EntityFactory {
     static async getEntity(instance) {
@@ -10,7 +10,7 @@ export default class EntityFactory {
                 const collection = db.collection('todos')
                 return new Todo(collection)
             default:
-                break;
+                break
         }
     }
 }
